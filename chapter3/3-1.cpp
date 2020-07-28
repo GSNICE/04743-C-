@@ -73,7 +73,7 @@ public:
 	void setName(string);
 	string getName();
 	void setBirthday(myDate);
-	myDate getBitthday();
+	myDate getBirthday();
 	void printStudent()const;
 private:
 	string name;
@@ -88,7 +88,7 @@ void Student::setStudent(string s, myDate d)
 	birthday.setDate(d);
 	return;
 }
-void Student::(string s)
+void Student::setStudent(string s)
 {
 	name = s;
 	myDate d;
