@@ -2,6 +2,7 @@
 #include <string>
 using namespace std;
 
+
 class myDate
 {
 public:
@@ -52,6 +53,15 @@ void myDate::setYear(int y)
 
 int myDate::getMonth()
 {
+    return month;
+}
+
+void myDate::printDate()const
+{
+    cout << year << "/" << month << "/" << day;
+    return;
+}
+
 
 class Student
 {
