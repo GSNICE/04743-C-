@@ -119,3 +119,20 @@ void Student::printStudent()const
 	birthday.printDate(); //调用myDate的成员函数
 	cout << endl;
 }
+
+int main()
+{
+	Student stud;
+	stud.printStudent();	 
+	stud.setName("111");
+	stud.printStudent(); 
+	Student *spointer[2] = {new Student(), &stud}; //初始化
+	Student sy[2] = {Student(), stud};
+	for (int i = 0; i < 2; i++)
+		spointer[i]->printStudent();
+
+	for (int i = 0; i < 2; i++)
+		spointer[i].printStudent();
+
+	return 0;
+}
