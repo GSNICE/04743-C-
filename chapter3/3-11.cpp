@@ -6,7 +6,14 @@ private:
 	int radius; //半径
 	int width; //宽度
 public:
-	CTyre():radius(16),width(185){} //构造函数
+	CTyre():radius(16),width(185)
+	{
+		cout << "使用CTyre默认构造函数" << "this=" << this << endl;
+	}
+	~CTyre()
+	{
+		cout << "使用析构函数" << "this=" << this << endl;
+	}
 	CTyre(int r, int w):radius(r), width(w){}
 	int getRadius()
 	{
@@ -28,9 +35,9 @@ public:
 	CCar(int p, int tr, int tw);
 	int getPrice()
 	{
-		return price;
+		return  price;
 	}
-	CTyre getCTyre()
+	CTyre & getCTyre()
 	{
 		return tyre;
 	}
@@ -44,9 +51,10 @@ CCar::CCar(int p, int tr, int tw):price(p), tyre(tr, tw){};	//使用初始化列
 
 int main()
 {
-	CCar car(48900, 17, 225);
-	cout << "price=" << car.getPrice();
-	cout << "\tCTyre.Radius =" << car.getCTyre().getRadius() << "\tCTyre.Width =" << car.getCTyre().getWidth() << endl;
+	//CCar car(48900, 17, 225);
+	//cout << "price=" << car.getPrice();
+	//cout << "\tCTyre.Radius =" << car.getCTyre().getRadius() << "\tCTyre.Width =" << car.getCTyre().getWidth() << endl;
+	cout << "main enter" << endl;
 	CCar car1;
 	cout << "price=" << car1.getPrice();
 	cout << "\tCTyre.Radius =" << car1.getCTyre().getRadius() << "\tCTyre.Width =" << car1.getCTyre().getWidth() << endl;
